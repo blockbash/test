@@ -15,10 +15,11 @@ body:
     type: checkboxes
   - attributes:
       description: |
-        1. Within vscode, navigate to `View` -> `Command Palette`.
-        2. Delete any text that is within the input box.
-        3. Add `task help-init-logs` to the input box.
-        4. Press the `RETURN` key.
+        1. Ensure that the current window has a title of `Blockbash`.
+        2. Navigate to `View` -> `Command Palette`.
+        3. Delete any text that is within the input box.
+        4. Add `task help-init-logs` to the input box.
+        5. Press the `RETURN` key.
             + This will copy the initialization logs to your clipboard.
         5. Paste the results into the text box below.
       label: "Log Collection: Initialization Logs"
@@ -31,10 +32,11 @@ body:
       required: true
   - attributes:
       description: |
-        1. Within vscode, navigate to `View` -> `Command Palette`.
-        2. Delete any text that is within the input box.
-        3. Add `task help-runtime-logs` to the input box.
-        4. Press the `RETURN` key.
+        1. Ensure that the current window has a title of `Blockbash`.
+        2. Navigate to `View` -> `Command Palette`.
+        3. Delete any text that is within the input box.
+        4. Add `task help-runtime-logs` to the input box.
+        5. Press the `RETURN` key.
             + This will copy the runtime logs to your clipboard.
         5. Paste the results into the text box below.
       label: "Log Collection: Runtime Logs"
