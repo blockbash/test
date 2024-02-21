@@ -1,0 +1,77 @@
+assignees:
+  - zachroofsec
+description: Report a problem.
+# Label inspiration: https://github.com/nektos/act/issues
+labels:
+  - kind/bug
+name: Bug report
+
+body:
+  - attributes:
+      label: Is there an existing issue for this?
+      options:
+        - label: I have searched the existing issues
+          required: true
+    type: checkboxes
+  - attributes:
+      description: |
+        1. Within vscode, navigate to `View` -> `Command Palette`.
+        2. Delete any text that is within the input box.
+        3. Add `task help-init-logs` to the input box.
+        4. Press the `RETURN` key.
+            + This will copy the initialization logs to your clipboard.
+        5. Paste the results into the text box below.
+      label: "Log Collection: Initialization Logs"
+      placeholder: |
+        Paste text here.
+      render: plain text
+    id: help-init-logs
+    type: textarea
+    validations:
+      required: true
+  - attributes:
+      description: |
+        1. Within vscode, navigate to `View` -> `Command Palette`.
+        2. Delete any text that is within the input box.
+        3. Add `task help-runtime-logs` to the input box.
+        4. Press the `RETURN` key.
+            + This will copy the runtime logs to your clipboard.
+        5. Paste the results into the text box below.
+      label: "Log Collection: Runtime Logs"
+      placeholder: |
+        Paste text here.
+      render: plain text
+    id: help-run-logs
+    type: textarea
+    validations:
+      required: true
+  - attributes:
+      description: |
+        What is the unexpected behavior that occurred?
+      label: Describe the problem
+      placeholder: |
+        Describe the problem
+    id: describe-the-problem
+    type: textarea
+    validations:
+      required: true
+  - attributes:
+      description: How did you encounter this bug? Please give us a step-by-step walkthrough.
+      label: Reproduction steps
+      value: |
+        1.
+        2.
+        3.
+        ...
+    id: reproduction-steps
+    type: textarea
+    validations:
+      required: true
+  - attributes:
+      label: Additional information
+      placeholder: |
+        Additional information that doesn't fit elsewhere
+    id: additional-info
+    type: textarea
+    validations:
+      required: false
