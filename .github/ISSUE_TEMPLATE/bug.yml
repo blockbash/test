@@ -37,6 +37,7 @@ body:
       value: |
         ## **IMPORTANT**
         If you did NOT encounter a bug within the Code Editor, you can skip to the end and click `Submit Issue`.
+        ---
     type: markdown
   - attributes:
       description: |
