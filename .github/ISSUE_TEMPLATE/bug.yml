@@ -8,48 +8,12 @@ name: Bug report
 
 body:
   - attributes:
-      label: Is there an existing issue for this?
+      label: Is there an preexisting issue for this?
       options:
-        - label: I have searched the existing issues
+        - label: I have searched the preexisting Github issues.
           required: true
     type: checkboxes
   - attributes:
-      description: |
-        1. Ensure that the current window has a title of `Blockbash`.
-        2. Navigate to `View` -> `Command Palette`.
-        3. Delete any text that is within the input box.
-        4. Add `task help-init-logs` to the input box.
-        5. Press the `RETURN` key.
-            + This will copy the initialization logs to your clipboard.
-        5. Paste the results into the text box below.
-      label: "Log Collection: Initialization Logs"
-      placeholder: |
-        Paste text here.
-      render: plain text
-    id: help-init-logs
-    type: textarea
-    validations:
-      required: true
-  - attributes:
-      description: |
-        1. Ensure that the current window has a title of `Blockbash`.
-        2. Navigate to `View` -> `Command Palette`.
-        3. Delete any text that is within the input box.
-        4. Add `task help-runtime-logs` to the input box.
-        5. Press the `RETURN` key.
-            + This will copy the runtime logs to your clipboard.
-        5. Paste the results into the text box below.
-      label: "Log Collection: Runtime Logs"
-      placeholder: |
-        Paste text here.
-      render: plain text
-    id: help-run-logs
-    type: textarea
-    validations:
-      required: true
-  - attributes:
-      description: |
-        What is the unexpected behavior that occurred?
       label: Describe the problem
       placeholder: |
         Describe the problem
@@ -70,9 +34,51 @@ body:
     validations:
       required: true
   - attributes:
+      value: |
+        ## **IMPORTANT**
+        If you did NOT encounter a bug within the Code Editor, you can skip to the end and click `Submit Issue`.
+    type: markdown
+  - attributes:
+      description: |
+        1. **IMPORTANT**: This step only applies to users that encountered a bug while running Blockbash within a "native" version of Visual Studio Code (i.e., not a web-based version).
+        2. Ensure that the current window has a title of `Blockbash`.
+        3. Press the `f1` key.
+            + This will open the `Command Palette`.
+        4. Delete any text that is within the input box.
+        5. Add `task help-init-logs` to the input box.
+        6. Press the `RETURN` key.
+            + This will copy the initialization logs to your clipboard.
+        7. Paste the results into the text box below.
+      label: "Log Collection: Initialization Logs"
+      placeholder: |
+        Paste text here.
+      render: plain text
+    id: help-init-logs
+    type: textarea
+    validations:
+      required: true
+  - attributes:
+      description: |
+        1. Ensure that the current window has a title of `Blockbash`.
+        2. Press the `f1` key.
+            + This will open the `Command Palette`.
+        3. Delete any text that is within the input box.
+        4. Add `task help-runtime-logs` to the input box.
+        5. Press the `RETURN` key.
+            + This will copy the runtime logs to your clipboard.
+        6. Paste the results into the text box below.
+      label: "Log Collection: Runtime Logs"
+      placeholder: |
+        Paste text here.
+      render: plain text
+    id: help-runtime-logs
+    type: textarea
+    validations:
+      required: true
+  - attributes:
       label: Additional information
       placeholder: |
-        Additional information that doesn't fit elsewhere
+        Additional information that doesn't fit elsewhere.
     id: additional-info
     type: textarea
     validations:
